@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="task1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <body style="background-color:black">
+        <div class="main">
+            <div class="subdiv">
+                <p class="div1"> Tasks (1) </p>
+                <form>
+                    <div class="div2">
+                        <input type="text" placeholder="New Task" class="box" id="click">
+
+
+                        <button type="button" onclick="printvalue()" class="btn" style="width:80px"><i class="fa fa-plus"></i>Add</button>
+                        <script>
+                            function printvalue() {
+                                var click = document.getElementById("click").value;
+                                window.alert(click);
+
+                            }
+                        </script>
+
+
+
+                    </div>
+                    <br>
+                    <div class="div2">
+                        <button class="btn" style="background-color:rgb(245, 58, 33)"><i class="fa fa-trash"></i> clear all</button>
+                        <button class="btn" style="width:160px;background-color:#FBB000"><i class="fa fa-check"></i> Clear Completed</button>
+
+
+
+                    </div>
+                    <br>
+                    <div class="div2">
+                        <input type="text" class="box" placeholder="hi " style="background-color:rgb(199, 235, 204);width: 540 ;color:black;">
+
+                        <button class="btn" style="background-color:rgb(245, 58, 33);width: 50px"><i class="fa fa-times"></i></button>
+
+
+
+                    </div>
+                    <br>
+                    <div class="div2">
+                        <input type="text" class="box" placeholder="hi " style="background-color:#F3F3F3;width: 540 ;color:black">
+
+                        <button class="btn" style="background-color:rgb(245, 58, 33);width: 50px"><i class="fa fa-times"></i></button>
+
+
+                    </div>
+                </form>
+
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
