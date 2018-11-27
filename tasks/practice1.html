@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <form>
+
+
+        <input type="text" placeholder="enter text" id="click">
+        <button type="button" onclick="addtext()">Login</button>
+        <ul id="list"> list of items </ul>
+
+
+    </form>
+
+    <script>
+        var textId = 0;
+
+        function addtext() {
+            textId++;
+            addElement('list', 'li', textId);
+        };
+
+
+        function addElement(parentid, elementtag, elementId) {
+
+            var ul = document.getElementById(parentid);
+            var li = document.createElement(elementtag);
+            var click = document.getElementById("click").value;
+
+            li.textContent = click;
+
+            var buton = document.createElement("button");
+
+            buton.innerHTML = "remove";
+            li.appendChild(buton);
+
+            ul.appendChild(li);
+            buton.onclick = "removeElement(elementId);"
+        };
+
+
+        function removeElement(elementid) {
+            window.alert("hy");
+
+            //var element = document.getElementById(elementid);
+            //element.parentNode.removeChild(element);
+        };
+    </script>
+</body>
+
+</html>
