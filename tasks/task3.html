@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="task1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <body style="background-color:#AABBCB">
+
+        <div class="subdiv">
+            <p class="div1"> Tasks (1) </p>
+            <form>
+                <div class="div2">
+
+                    <input type="text" placeholder="New Task" class="box" id="add">
+
+
+                    <button type="button" onclick="addvalue()" class="btn" style="width:80px"><i class="fa fa-plus"></i>Add</button>
+                    <script>
+                        var textId = 0;
+
+                        function addvalue() {
+                            textId++;
+                            addElement('list', 'li', textId);
+                        };
+
+                        function addElement(parentid, elementtag, elementId) {
+
+                            var ul = document.getElementById(parentid);
+                            var li = document.createElement(elementtag);
+                            var add = document.getElementById("add").value;
+
+                            li.textContent = add;
+                            li.id = elementId;
+
+                            var remove_button = document.createElement("button");
+
+                            remove_button.innerHTML = "remove";
+                            remove_button.addEventListener('click', function() {
+                                removeElement(elementId);
+                            });
+                            li.appendChild(remove_button);
+
+                            ul.appendChild(li);
+
+                        };
+
+                        function removeElement(elementid) {
+
+                            var list = document.getElementById("list");
+                            var element = document.getElementById(elementid);
+                            if (list.hasChildNodes()) {
+                                var removedItem = list.removeChild(element);
+                                alert("Removed Item id: " + removedItem.id);
+                            };
+
+
+
+                        };
+                    </script>
+
+
+
+                </div>
+                <br>
+                <div class="div2">
+                    <button class="btn" style="background-color:rgb(245, 58, 33)"><i class="fa fa-trash"></i> clear all</button>
+                    <button class="btn" style="width:160px;background-color:#FBB000"><i class="fa fa-check"></i> Clear Completed</button>
+
+
+
+                </div>
+                <br>
+                <div class="div2">
+                    <input type="text" class="box" placeholder="hi " style="background-color:rgb(199, 235, 204);width: 540 ;color:black;">
+
+                    <button class="btn" style="background-color:rgb(245, 58, 33);width: 50px"><i class="fa fa-times"></i></button>
+
+
+
+                </div>
+                <br>
+                <div class="div2">
+                    <input type="text" class="box" placeholder="hi " style="background-color:#F3F3F3;width: 540 ;color:black">
+
+                    <button class="btn" style="background-color:rgb(245, 58, 33);width: 50px"><i class="fa fa-times"></i></button>
+
+
+                </div>
+            </form>
+
+
+
+        </div>
+        <ul id="list">list of items
+
+
+        </ul>
+
+
+
+    </body>
+
+</html>
