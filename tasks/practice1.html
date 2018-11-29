@@ -33,6 +33,7 @@
             var click = document.getElementById("click").value;
 
             li.textContent = click;
+            li.id = elementId;
 
             var remove_button = document.createElement("button");
 
@@ -50,11 +51,11 @@
         function removeElement(elementid) {
 
             var list = document.getElementById("list");
+            var element = document.getElementById(elementid);
 
             if (list.hasChildNodes()) {
-                var remove = list.removeChild(list.childNodes[elementid]);
-                //window.alert(remove);
-
+                var removedItem = list.removeChild(element);
+                alert("Removed Item id: " + removedItem.id);
             };
 
         };
