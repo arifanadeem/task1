@@ -34,21 +34,29 @@
 
             li.textContent = click;
 
-            var buton = document.createElement("button");
+            var remove_button = document.createElement("button");
 
-            buton.innerHTML = "remove";
-            li.appendChild(buton);
+            remove_button.innerHTML = "remove";
+            remove_button.addEventListener('click', function() {
+                removeElement(elementId);
+            });
+            li.appendChild(remove_button);
 
             ul.appendChild(li);
-            buton.onclick = "removeElement(elementId);"
+            // buton.onclick = "removeElement(' +elementId+ ');"
         };
 
 
         function removeElement(elementid) {
-            window.alert("hy");
 
-            //var element = document.getElementById(elementid);
-            //element.parentNode.removeChild(element);
+            var list = document.getElementById("list");
+
+            if (list.hasChildNodes()) {
+                var remove = list.removeChild(list.childNodes[elementid]);
+                //window.alert(remove);
+
+            };
+
         };
     </script>
 </body>
