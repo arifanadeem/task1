@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="task4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="div1">
+        <div class="div2">
+
+
+        </div>
+        <div class="content">
+            <p style="font-size:35px;"> TO-DO LIST</p>
+
+        </div>
+        <br>
+        <div class="record">
+            <input type="text" placeholder="New to-do..." class="box" id="add">
+
+
+            <button type="button" onclick="addvalue()" class="btn" style="width:80px"><i class="fa fa-plus"></i>Add</button><br><br>
+
+            <button class="btn" style="background-color:rgb(245, 58, 33)"><i class="fa fa-trash"></i> clear all</button>
+            <button class="btn" style="width:160px;background-color:#FBB000"><i class="fa fa-check"></i> Clear Completed</button>
+            <br>
+            <br>
+            <ul id="list" style="font-size:20px"> <span></span></ul>
+
+
+            <script>
+                var textId = 0;
+
+                function addvalue() {
+                    // document.write("<br>");
+                    textId++;
+                    addElement('list', 'li', textId);
+                };
+
+                function addElement(parentid, elementtag, elementId) {
+
+                    var ul = document.getElementById(parentid);
+                    var li = document.createElement(elementtag);
+                    var add = document.getElementById("add").value;
+
+
+
+
+
+                    li.textContent = add;
+                    li.id = elementId;
+
+                    var remove_button = document.createElement("button");
+
+                    remove_button.innerHTML = "X";
+                    remove_button.className = "btn1";
+                    remove_button.addEventListener('click', function() {
+                        removeElement(elementId);
+                    });
+                    li.appendChild(remove_button);
+
+                    ul.appendChild(li);
+
+                };
+
+                function removeElement(elementid) {
+
+                    var list = document.getElementById("list");
+                    var element = document.getElementById(elementid);
+                    if (list.hasChildNodes()) {
+                        var removedItem = list.removeChild(element);
+                        //alert("Removed Item id: " + removedItem.id);
+                    };
+
+
+
+                };
+            </script>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>

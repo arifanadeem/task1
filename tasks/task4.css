@@ -1,0 +1,78 @@
+.div1 {
+    height: 850px;
+    width: 1000px;
+    margin: 0 auto;
+    background-color: #AABBCB;
+    margin-top: 30px;
+    padding-top: 1px;
+}
+
+.div2 {
+    height: 90px;
+    width: 1000px;
+    background-color: #007ACF;
+    font-size: 20px;
+    color: white;
+}
+
+.content {
+    padding-left: 15px;
+    width: 985px;
+    color: white;
+    background-color: #007ACF;
+    padding-top: 5px;
+}
+
+.record {
+    width: 800px;
+    height: 20px;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 1px;
+}
+
+li {
+    background-color: white;
+    margin: 15px;
+    margin-left: 0px;
+    padding-bottom: 14px;
+    padding-left: 8px;
+    padding-top: 5px;
+    color: #AABBCB;
+}
+
+.box {
+    width: 720px;
+    height: 40px;
+    border: 1px solid #AABBCB;
+    padding-left: 10px;
+}
+
+.btn {
+    background-color: rgb(17, 133, 211);
+    color: white;
+    font-size: 15px;
+    float: right;
+    height: 40px;
+    width: 110px;
+    text-align: center;
+    padding-top: 2px;
+    border: 1px;
+}
+
+.btn1 {
+    background-color: rgb(245, 58, 33);
+    color: white;
+    font-size: 15px;
+    float: right;
+    height: 42px;
+    width: 50px;
+    text-align: center;
+    padding-bottom: 7px;
+    margin-bottom: 9px;
+    border: 1px;
+    border-top: 10px;
+    margin-top: -5px;
+}
